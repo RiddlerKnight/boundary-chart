@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  boundary:
+    - apiVersion: v2
+      appVersion: 0.11.0
+      created: "2023-01-27T15:55:08.8435267+07:00"
+      description: A Helm chart for HashiCorp Boundary
+      digest: cbb73c85e294a67a2dc5ba5f259da03e68a54a59f5437ed18f089b9eca9bdb96
+      name: boundary
+      type: application
+      urls:
+        - packages/boundary-0.2.6.tgz
+      version: 0.2.6
+generated: "2023-01-27T15:55:08.8414179+07:00"
