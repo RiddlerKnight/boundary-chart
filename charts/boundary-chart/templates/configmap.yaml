@@ -65,6 +65,7 @@ data:
     }
     {{- end }}
     {{- else }}
+    {{- if .Values.aead.enabled }}
     {{- range $purpose, $key := .Values.aead.keys }}
     kms "aead" {
       purpose = "{{ $purpose }}"
@@ -72,6 +73,7 @@ data:
       aead_type = "aes-gcm"
       key = "{{ $key }}"
     }
+    {{- end }}
     {{- end }}
     {{- end }}
   boundary-config.hcl: |
@@ -136,6 +138,7 @@ data:
     }
     {{- end }}
     {{- else }}
+    {{- if .Values.aead.enabled }}
     {{- range $purpose, $key := .Values.aead.keys }}
     kms "aead" {
       purpose = "{{ $purpose }}"
@@ -143,5 +146,6 @@ data:
       aead_type = "aes-gcm"
       key = "{{ $key }}"
     }
+    {{- end }}
     {{- end }}
     {{- end }}
